@@ -1,0 +1,16 @@
+spring: 
+	profiles:
+		active:
+		-dev
+---
+spring: 
+	profiles: dev
+	application:
+		name: microservicecloud-config-zzy-dev
+---
+spring:
+	profiles: test
+	applicaion:
+		name: name:microservicecloud-config-zzy-test
+---
+		
