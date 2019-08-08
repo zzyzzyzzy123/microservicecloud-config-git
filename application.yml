@@ -1,12 +1,12 @@
 spring:
     profiles:
     active: dev
---  
+---  
 spring:
     profiles: dev
     applicaion: 
         name: microservicecloud-config-zzy-dev
---   
+---
 spring:
     profiles: test
     applicaion: 
