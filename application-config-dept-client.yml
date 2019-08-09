@@ -9,14 +9,27 @@ mybatis:
 spring:
   #注册服务的名字
   application:
-      name: microservicecloud-dept
+    name: microservicecloud-dept
   profiles: dev
   datasource:
-    url: jdbc:mysql:///cloud1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&useJDBCCompliantTimezoneShift=true
+    url:  url:jdbc:mysql:///cloud1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
     password: 782755046
-    driver-class-name: com.mysql.jdbc.driver
-
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type:com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 30000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 logging:
   #指定日志的等级，可以对不同包采用不同的等级，比如如下配置就是将root的等级设置为info，将com.example设置为debug
   level: {root: info,com.example: debug}
@@ -43,6 +56,13 @@ eureka:
       #defaultZone:   http://localhost:7001/eureka/
       defaultZone: http://eureka7001.com:7001/eureka 
 
+ 
+  
+
+ 
+
+
+
 
 ---
 server:
@@ -61,8 +81,31 @@ spring:
     url: jdbc:mysql:///cloud2?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&useJDBCCompliantTimezoneShift=true
     username: root
     password: 782755046
-    driver-class-name: com.mysql.jdbc.driver
-
+    driver-class-name: com.mysql.cj.jdbc.Driver
+spring:
+  #注册服务的名字
+  application:
+    name: microservicecloud-dept
+  profiles: dev
+  datasource:
+    url:  url:jdbc:mysql:///cloud1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 782755046
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type:com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 30000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 logging:
   #指定日志的等级，可以对不同包采用不同的等级，比如如下配置就是将root的等级设置为info，将com.example设置为debug
   level: {root: info,com.example: debug}
