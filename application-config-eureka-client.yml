@@ -1,46 +1,46 @@
 
 spring:
-    profiles:
-    actives: dev
+  profiles:
+  actives: dev
 #eureka.instance.hostname=127.0.0.1
 #映射
 ---
 server:
-    port: 7001
+  port: 7001
   
 spring:
-    application: 
-        name: microservicecloud-config-eureka-client
-    profiles: dev
+  application: 
+    name: microservicecloud-config-eureka-client
+  profiles: dev
+
 eureka:
-    instance:
-        hostname: eureka7001.com
-        prefer-ip-address: true
-        instance-id:  microservicecloud-eureka-7001
-    client:
-        serviceUrl:
-            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  instance:
+    hostname:  http://eureka7001.com
+    prefer-ip-address: true
+    instance-id: microservicecloud-eureka-7001
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     registerWithEureka: false
     fetchRegistry: false
-
 ---
 server:
   port: 7002
   
 spring:
-    application: 
-        name: microservicecloud-config-eureka-client
-    profiles: test
+  application: 
+    name: microservicecloud-config-eureka-client
+  profiles: test
 eureka:
-    instance:
-        hostname: eureka7001.com
-        prefer-ip-address: true
-        instance-id:  microservicecloud-eureka-7001
+  instance:
+    hostname: eureka7001.com
+    prefer-ip-address: true
+    instance-id:  microservicecloud-eureka-7001
 #单机
 #eureka.client.serviceUrl.defaultZone=http://${eureka.instance.hostname}:${server.port}/eureka/
-    client:
-        serviceUrl:
-            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-    registerWithEureka: false
-    fetchRegistry: false
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  registerWithEureka: false
+  fetchRegistry: false
 
