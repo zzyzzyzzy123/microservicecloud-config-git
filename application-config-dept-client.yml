@@ -12,10 +12,10 @@ spring:
       name: microservicecloud-dept
   profiles: dev
   datasource:
-    url: jdbc:mysql:///cloud1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&useJDBCCompliantTimezoneShift=true&
+    url: jdbc:mysql:///cloud1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&useJDBCCompliantTimezoneShift=true
     username: root
     password: 782755046
-    driver-class-name: com.mysql.cj.jdbc.driver
+    driver-class-name: com.mysql.jdbc.driver
 
 logging:
   #指定日志的等级，可以对不同包采用不同的等级，比如如下配置就是将root的等级设置为info，将com.example设置为debug
@@ -58,10 +58,10 @@ spring:
       name: microservicecloud-dept
   profiles: test
   datasource:
-    url: jdbc:mysql:///cloud2?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&useJDBCCompliantTimezoneShift=true&
+    url: jdbc:mysql:///cloud2?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&useJDBCCompliantTimezoneShift=true
     username: root
     password: 782755046
-    driver-class-name: com.mysql.cj.jdbc.driver
+    driver-class-name: com.mysql.jdbc.driver
 
 logging:
   #指定日志的等级，可以对不同包采用不同的等级，比如如下配置就是将root的等级设置为info，将com.example设置为debug
