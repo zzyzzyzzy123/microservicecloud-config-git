@@ -12,11 +12,11 @@ spring:
     name: microservicecloud-dept
   profiles: dev
   datasource:
-    url:  url:jdbc:mysql:///cloud1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql:///cloud1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
     password: 782755046
     driver-class-name: com.mysql.cj.jdbc.Driver
-    type:com.alibaba.druid.pool.DruidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
     initialSize: 5
     minIdle: 5
     maxActive: 20
@@ -82,7 +82,7 @@ spring:
     username: root
     password: 782755046
     driver-class-name: com.mysql.cj.jdbc.Driver
-    type:com.alibaba.druid.pool.DruidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
     initialSize: 5
     minIdle: 5
     maxActive: 20
