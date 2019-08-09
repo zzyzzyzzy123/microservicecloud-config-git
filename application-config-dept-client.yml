@@ -12,7 +12,7 @@ spring:
       name: microservicecloud-dept
   profiles: dev
   datasource:
-    url: jdbc:mysql:///cloud1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql:///cloud1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&useJDBCCompliantTimezoneShift=true&
     username: root
     password: 782755046
     driver-class-name: com.mysql.cj.jdbc.driver
@@ -58,7 +58,7 @@ spring:
       name: microservicecloud-dept
   profiles: test
   datasource:
-    url: jdbc:mysql:///cloud2?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql:///cloud2?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&useJDBCCompliantTimezoneShift=true&
     username: root
     password: 782755046
     driver-class-name: com.mysql.cj.jdbc.driver
