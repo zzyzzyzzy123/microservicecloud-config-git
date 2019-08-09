@@ -6,7 +6,7 @@ spring:
 #映射
 ---
 server:
-  port: 7001
+    port: 7001
   
 spring:
     application: 
@@ -17,7 +17,7 @@ eureka:
         hostname: eureka7001.com
         prefer-ip-address: true
         instance-id:  microservicecloud-eureka-7001
-     client:
+    client:
         serviceUrl:
             defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
      registerWithEureka: false
@@ -38,9 +38,9 @@ eureka:
         instance-id:  microservicecloud-eureka-7001
 #单机
 #eureka.client.serviceUrl.defaultZone=http://${eureka.instance.hostname}:${server.port}/eureka/
-     client:
+    client:
         serviceUrl:
             defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-     registerWithEureka: false
-     fetchRegistry: false
+    registerWithEureka: false
+    fetchRegistry: false
 
