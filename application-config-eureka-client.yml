@@ -29,7 +29,6 @@ spring:
   profiles: test
   application: 
     name: microservicecloud-config-eureka-client
-  profiles: test
 server:
   port: 7002  
   
