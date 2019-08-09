@@ -5,13 +5,14 @@ spring:
 #eureka.instance.hostname=127.0.0.1
 #映射
 ---
-server:
-  port: 7001
-  
+
 spring:
+  profiles: dev
   application: 
     name: microservicecloud-config-eureka-client
-  profiles: dev
+server:
+  port: 7001
+   
 
 eureka:
   instance:
@@ -23,14 +24,15 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     registerWithEureka: false
     fetchRegistry: false
----
-server:
-  port: 7002
-  
+--- 
 spring:
+  profiles: test
   application: 
     name: microservicecloud-config-eureka-client
   profiles: test
+server:
+  port: 7002  
+  
 eureka:
   instance:
     hostname: eureka7001.com
